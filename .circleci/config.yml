@@ -4,7 +4,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: echoct/nginx:v2
+      - image: echoct/cetnostest
     steps:
       - checkout
-      - run: docker build -t nginx:v3 .
+      - run: docker build -t cetnostest:v1 .
