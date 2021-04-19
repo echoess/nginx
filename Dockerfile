@@ -1,4 +1,4 @@
-FROM centos
-ADD ./docker-ce.repo /etc/yum.repos.d
-RUN yum clean all && yum makecache && \
-yum  install -y docker-ce
+FROM centos/test
+ADD ./index.html /usr/share/nginx/html/
+ADD ./nginx.conf /etc/nginx/
+CMD CMD ["nginx", "-g", "daemon off;"]
